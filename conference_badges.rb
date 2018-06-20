@@ -22,6 +22,11 @@ def assign_rooms(guest_list)
 end
 
 def printer(guest_list)
-  puts batch_badge_creator(guest_list)
-  puts assign_rooms(guest_list)
+  batch_badge_creator(guest_list).each do |guest|
+    puts guest
+  end
+  
+  assign_rooms(guest_list).each do |room_assigment|
+    puts room_assigment
+  end
 end
